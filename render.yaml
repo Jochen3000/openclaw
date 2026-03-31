@@ -5,7 +5,7 @@ services:
     region: frankfurt
     plan: standard
     healthCheckPath: /health
-    dockerCommand: sh -c "node openclaw.mjs config set gateway.controlUi.dangerouslyAllowHostHeaderOriginFallback true && node openclaw.mjs gateway --allow-unconfigured --bind lan --port 8080"
+    dockerCommand: sh scripts/render-entrypoint.sh
     envVars:
       - key: OPENCLAW_GATEWAY_PORT
         value: "8080"
