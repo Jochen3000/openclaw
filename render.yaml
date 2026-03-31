@@ -3,7 +3,7 @@ services:
     name: openclaw
     runtime: docker
     region: frankfurt
-    plan: starter
+    plan: standard
     healthCheckPath: /health
     envVars:
       - key: OPENCLAW_GATEWAY_PORT
